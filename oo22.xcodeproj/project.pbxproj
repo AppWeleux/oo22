@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5318F745B4C1055FA90ACC35 /* Pods_oo22.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F64BAA6346FEF7A6E5FECC /* Pods_oo22.framework */; };
 		54E69E6223EAF73900ABB2FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E69E6123EAF73900ABB2FD /* AppDelegate.swift */; };
 		54E69E6423EAF73900ABB2FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E69E6323EAF73900ABB2FD /* SceneDelegate.swift */; };
 		54E69E6623EAF73900ABB2FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E69E6523EAF73900ABB2FD /* ViewController.swift */; };
@@ -24,6 +25,9 @@
 		54E69E6A23EAF73B00ABB2FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54E69E6D23EAF73B00ABB2FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54E69E6F23EAF73B00ABB2FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF915B02E6C0350F9905697C /* Pods-oo22.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oo22.debug.xcconfig"; path = "Target Support Files/Pods-oo22/Pods-oo22.debug.xcconfig"; sourceTree = "<group>"; };
+		B3B2204ED65EB785B3640577 /* Pods-oo22.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oo22.release.xcconfig"; path = "Target Support Files/Pods-oo22/Pods-oo22.release.xcconfig"; sourceTree = "<group>"; };
+		B9F64BAA6346FEF7A6E5FECC /* Pods_oo22.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oo22.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5318F745B4C1055FA90ACC35 /* Pods_oo22.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F1226326B44F8ED4DBDD1CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9F64BAA6346FEF7A6E5FECC /* Pods_oo22.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		54E69E5523EAF73900ABB2FD = {
 			isa = PBXGroup;
 			children = (
 				54E69E6023EAF73900ABB2FD /* oo22 */,
 				54E69E5F23EAF73900ABB2FD /* Products */,
+				EA7B1C02E06B7B2AD46793A2 /* Pods */,
+				3F1226326B44F8ED4DBDD1CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = oo22;
 			sourceTree = "<group>";
 		};
+		EA7B1C02E06B7B2AD46793A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF915B02E6C0350F9905697C /* Pods-oo22.debug.xcconfig */,
+				B3B2204ED65EB785B3640577 /* Pods-oo22.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54E69E7223EAF73B00ABB2FD /* Build configuration list for PBXNativeTarget "oo22" */;
 			buildPhases = (
+				045C63D8CA5ABE4F19D0E387 /* [CP] Check Pods Manifest.lock */,
 				54E69E5A23EAF73900ABB2FD /* Sources */,
 				54E69E5B23EAF73900ABB2FD /* Frameworks */,
 				54E69E5C23EAF73900ABB2FD /* Resources */,
+				C22A60B9BF7087D32D2B79F8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		045C63D8CA5ABE4F19D0E387 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-oo22-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C22A60B9BF7087D32D2B79F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-oo22/Pods-oo22-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-oo22/Pods-oo22-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-oo22/Pods-oo22-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		54E69E5A23EAF73900ABB2FD /* Sources */ = {
@@ -282,11 +351,13 @@
 		};
 		54E69E7323EAF73B00ABB2FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF915B02E6C0350F9905697C /* Pods-oo22.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7DQZ2FZ4T5;
 				INFOPLIST_FILE = oo22/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +371,13 @@
 		};
 		54E69E7423EAF73B00ABB2FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3B2204ED65EB785B3640577 /* Pods-oo22.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7DQZ2FZ4T5;
 				INFOPLIST_FILE = oo22/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

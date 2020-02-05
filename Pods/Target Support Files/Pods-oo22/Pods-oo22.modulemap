@@ -1,0 +1,6 @@
+framework module Pods_oo22 {
+  umbrella header "Pods-oo22-umbrella.h"
+
+  export *
+  module * { export * }
+}
